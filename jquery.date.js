@@ -29,22 +29,16 @@ jQuery.Date = function(options) {
 				return finalDate;
 			}
 			else{
-				//return date with the given format;
-				//if(isValid(settings.format)){
-					day = extractDay();
-					month = extractMonth();				
-					year = extractYear();
-					if(day === 'invalid' || month === 'invalid' || year === 'invalid')
-						return 'Format specified is wrong. Please see documentation on valid date format'
-					var finalDate = settings.format;
-					finalDate =  finalDate.replace(settings.day, day);
-					finalDate =  finalDate.replace(settings.month, month);
-					finalDate =  finalDate.replace(settings.year, year);
-					return finalDate;
-					
-				//}
-				
-			
+				day = extractDay();
+				month = extractMonth();				
+				year = extractYear();
+				if(day === 'invalid' || month === 'invalid' || year === 'invalid')
+					return 'Format specified is wrong. Please see documentation on valid date format'
+				var finalDate = settings.format;
+				finalDate =  finalDate.replace(settings.day, day);
+				finalDate =  finalDate.replace(settings.month, month);
+				finalDate =  finalDate.replace(settings.year, year);
+				return finalDate;			
 			}
 			
 			function extractYear(){
